@@ -1,109 +1,57 @@
-# JavaScript Challenge 1
+# JavaScript Challenge 2
 
-## Goals of Challenge 1
+## Goal of Challenge 2
 
-- Linking JS file
-- Variables
-- Data types
-- Differences between let, const, var
-- Basic operations
-- Operator precedence
-- Template literals
+- If else statement
+- Boolean logic
+- Logical operators
+- Switch statement
 
-### Step 1
+## Step 1
 
-- Link the existing JS file to the HTML file.
-- Review the code within the JS file.
-- Open the HTML file in a browser and ensure successful JS file linkage.
-- Commit: "Challenge 1 - Done with Step 1"
+1. Declare a variable `age` and assign your age as a value.
+2. Using an if else statement, check whether the age is greater than or equal to 20.
+   - If yes, log to the console: "You can enter this room."
+   - If no, log to the console: "You can't enter this room."
+3. Research about boolean logic.
 
-### Step 2
+```javascript
+const expression1 = 5 > 3;
+const expression2 = 10 === '10';
+const expression3 = true && false;
+const expression4 = !expression3;
+```
 
-- Inside the JS file, declare a variable `name`.
-- Assign your name as the value for the `name` variable.
-- Display the value of the variable in an alert box.
-- Commit: "Challenge 1 - Done with Step 2"
+4. Copy the above code snippet and paste it into your JS file.
+5. Log to the console the 4 variables to check the result of each.
+6. Commit: "Challenge 2 - Done with step 1".
 
-### Step 3
+## Step 2
 
-- Declare 3 variables (`age`, `lastName`, `DOB`) using 3 different declaration methods.
-- Assign appropriate values to each variable.
-- Experiment with changing variable values.
-- Log all 3 variables to the console.
-- Compare the outcomes of the three declaration methods.
-- Commit: "Challenge 1 - Done with Step 3"
+```javascript
+const age = 25;
+const hasDriverLicense = true;
+const hasCar = false;
+```
 
-## Exploring Data Types
+1. Copy the above code snippet and paste it into your JS file.
+2. Declare a variable `canDrive` and assign a default value of `false`.
+   - Check if the age is greater than or equal to 18 and `hasDriverLicense` is `true`, then change the `canDrive` variable to `true`.
+3. Declare a variable `canRentCar` and assign a default value of `false`.
+   - Check if the age is greater than or equal to 22, `hasDriverLicense` is `true`, and doesn't have a car, then change the `canRentCar` variable to `true`.
+4. Declare a variable `needDriver` and assign a default value of `false`.
+   - Check if the age is less than 18, `hasDriverLicense` is `false`, and `hasCar` is also `false`, then change the `needDriver` variable to `true`.
+5. Commit: "Challenge 2 - Done with step 2".
 
-### Step 4
+## Step 3
 
-- Log the data types of the following values to the console:
-  - `"This is a text"`
-  - `true`
-  - `false`
-  - `1215`
-  - `"999"`
-  - `{}`
-  - `[]`
-  - `null`
-  - `undefined`
-- Declare 6 variables and assign them different data types.
-- Log each variable along with its data type.
-- Commit: "Challenge 1 - Done with Step 4"
-
-### Step 5
-
-- Declare a variable `myText` and assign a string value to it.
-- Use three different ways to declare strings: double quotations, single quotations, and backticks.
-- Research interpolation and apply it in the examples.
-  ```javascript
-  const counter = 3;
-  const backtick = `This is my text using backticks ${counter} times`;
-  const singleQuote =
-    'This is my text using single quotations ${counter} times';
-  const doubleQuote =
-    'This is my text using double quotations ${counter} times';
-  const tryThisAlso = `This is my new version, it’s the ${2 + 3}th version`;
-  ```
-- Copy the above code snippet into the JS file.
-- Log all the variables in the provided code snippet to the console.
-- Explain the differences between these string declaration methods in the console.
-- Commit: "Challenge 1 - Done with Step 5"
-
-### Step 6
-
-- Declare 2 string variables of your choice.
-- Declare a new variable `result`.
-- Concatenate the values of the first two variables and assign the result to the `result` variable.
-- Commit: "Challenge 1 - Done with Step 6"
-
-## Exploring Operators
-
-### Step 7
-
-- Understand the differences between the following operators:
-  - strict equality operator (`===`)
-  - strict inequality operator (`!==`)
-  - loose equality operator (`==`)
-  - loose inequality operator (`!=`)
-- Use each of these operators at least twice to compare different data types.
-- Understand the differences between the following operators:
-  - greater than (`>`)
-  - greater than or equals (`>=`)
-  - less than (`<`)
-  - less than or equals (`<=`)
-- Use each of these operators at least twice to compare different data types.
-- Commit: "Challenge 1 - Done with Step 7"
-
-### Step 8
-
-- Declare a variable `result0` and assign the value of the equation `5 + 3 * 2` to it.
-- Before logging the value of `result0`, try to anticipate the answer.
-- Declare a variable `result1` and assign the value of the equation `10 / 2 + 3` to it.
-- Declare a variable `result2` and assign the value of the equation `10 / (2 + 3)` to it.
-- Before logging the values of `result1` and `result2`, anticipate the answers.
-- Compare the results of `result1` and `result2` and explain the difference.
-- Commit: "Challenge 1 - Done with Step 8"
+1. Declare a variable “role”, assign “admin” as a default value.
+2. Using switch case:
+   - If the role is admin, log to the console “You have read and write access for the data”.
+   - If the role is user, log to the console “You have only read access for the data”.
+   - If the role is guest, log to the console “You have no access for the data”.
+   - For default, log to the console “User role is not recoginized”.
+3. Commit: "Challenge 2 - Done with step 3".
 
 Don't forget to push your code to GitHub!<br>
 Wishing you all the best and happy coding!<br>

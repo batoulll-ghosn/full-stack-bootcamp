@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .color-change-button {
+            padding: 10px 20px;
+            background-color: lightgray;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Multiple Event Listeners -->
+    <button id="hoverButton" class="color-change-button">Hover Me!</button>
+
+    <!-- Event Delegation -->
+    <div id="buttonContainer">
+        <button class="color-change-button">Button 1</button>
+        <button class="color-change-button">Button 2</button>
+        <button class="color-change-button">Button 3</button>
+    </div>
+
+    <!-- Form Data Extraction -->
+    <form id="userDataForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // Multiple Event Listeners
+        const hoverButton = document.getElementById("hoverButton");
+        hoverButton.addEventListener("mouseover", () => {
+            hoverButton.style.backgroundColor = "lightblue";
+        });
+        hoverButton.addEventListener("mouseout", () => {
+            hoverButton.style.backgroundColor = "lightgray";
+        });
+
+        // Event Delegation
+        const buttonContainer = document.getElementById("buttonContainer");
+        buttonContainer.addEventListener("click", event => {
+            if (event.target.tagName === "BUTTON") {
+                console.log("Clicked button:", event.target.textContent);
+            }
+        });
+
+        // Form Data Extraction
+        const userDataForm = document.getElementById("userDataForm");
+        userDataForm.addEventListener("submit", event => {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            console.log("Name:", name);
+            console.log("Email:", email);
+        });
+    </script>
+
+
+</body>
+
+</html>

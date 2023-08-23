@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <!-- DOM Cloning -->
+    <div id="originalElement">
+        <p>This is an original element.</p>
+    </div>
+
+    <button id="cloneButton">Clone and Append</button>
+
+    <!-- Element Removal -->
+    <div id="removableElement">
+        <p>This element can be removed.</p>
+    </div>
+
+    <button id="removeButton">Remove Element</button>
+
+    <!-- Inserting Elements -->
+    <div>
+        <p>This is the first element.</p>
+        <p>This is the second element.</p>
+    </div>
+
+    <button id="insertBeforeButton">Insert Before</button>
+    <button id="insertAfterButton">Insert After</button>
+
+    <script>
+        // Challenge 5 - Done with step 3
+
+        // DOM Cloning
+        const originalElement = document.getElementById("originalElement");
+        const cloneButton = document.getElementById("cloneButton");
+
+        cloneButton.addEventListener("click", () => {
+            const clonedElement = originalElement.cloneNode(true);
+            document.body.appendChild(clonedElement);
+        });
+
+        // Element Removal
+        const removableElement = document.getElementById("removableElement");
+        const removeButton = document.getElementById("removeButton");
+
+        removeButton.addEventListener("click", () => {
+            removableElement.remove();
+        });
+
+        // Inserting Elements
+        const firstElement = document.querySelector("p:first-child");
+        const secondElement = document.querySelector("p:last-child");
+        const insertBeforeButton = document.getElementById("insertBeforeButton");
+        const insertAfterButton = document.getElementById("insertAfterButton");
+
+        insertBeforeButton.addEventListener("click", () => {
+            const newElement = document.createElement("p");
+            newElement.textContent = "New Element (Before)";
+            firstElement.parentNode.insertBefore(newElement, firstElement);
+        });
+
+        insertAfterButton.addEventListener("click", () => {
+            const newElement = document.createElement("p");
+            newElement.textContent = "New Element (After)";
+            secondElement.parentNode.insertBefore(newElement, secondElement.nextSibling);
+        });
+
+// Commit: "Challenge 5 - Done with step 3".
+    </script>
+
+</body>
+
+</html>
